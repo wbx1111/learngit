@@ -5,10 +5,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY sentiment_api.py .
-COPY bilstm_sentiment_model.keras .
-COPY tokenizer.pkl .
+COPY main.py .
+COPY bilstm_sentiment_checkpoint.pt .
 
 EXPOSE 8000
 
-CMD ["uvicorn", "sentiment_api:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
