@@ -1,5 +1,4 @@
-fastapi
-uvicorn
-tensorflow==2.10.0
-numpy
-pydantic
+fastapi==0.115.0
+uvicorn==0.30.6
+torch==2.4.0
+nltk==3.9.1
